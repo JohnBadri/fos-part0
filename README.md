@@ -78,6 +78,4 @@ sequenceDiagram
     Note over server: Server processes POST request
     server-->>browser: 201 Created, resource created
     deactivate server
-
-    Note over browser: Browser stays on the same page; no further HTTP requests are sent
 ```

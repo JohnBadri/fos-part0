@@ -65,3 +65,19 @@ sequenceDiagram
     server-->>browser: [{ "content": "bubble", "date": "2023-11-03T17:00:24.488Z" }, ... ]
     deactivate server
 ```
+
+## Exercise 06 - New Note in Single Page App
+
+```mermaid
+sequenceDiagram
+    participant browser as Browser
+    participant server as Server
+
+    browser->>server: POST https://studies.cs.helsinki.fi/exampleapp/new_note_spa with JSON data
+    activate server
+    Note over server: Server processes POST request
+    server-->>browser: 201 Created, resource created
+    deactivate server
+
+    Note over browser: Browser stays on the same page; no further HTTP requests are sent
+```
